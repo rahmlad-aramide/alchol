@@ -8,14 +8,21 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #29A64C;
+  --color-secondary: #C9CC3A;
+  --font-sans: var(--font-alumni-sans);
+  --font-late: var(--font-lato);
+  --why-alchol: url('../public/why-background.png');
+  --our-products: url('../public/products-background.webp');
+  --sustainable-energy: url('../public/sustainable-energy-background.webp');
+  --shadow-card: 0px 1px 10px 0px #00000040;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FCFCFC;
+    --foreground: #021207CC;
   }
 }
 
@@ -23,4 +30,32 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.underline-innovation, .underline-standards, .underline-sustainable, .underline-chemical {
+  position: relative;
+}
+
+.underline-innovation::after, .underline-standards::after, .underline-sustainable::after, .underline-chemical::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.underline-sustainable::after {
+  background-color: #29A64C;
+}
+
+.underline-innovation::after, .underline-standards::after, .underline-chemical::after {
+  background-color: #C9CC3A;
+}
+
+.underline-innovation::after, .underline-sustainable::after {
+  bottom: 12px;
+}
+
+.underline-standards::after, .underline-chemical::after, .underline-sustainable2::after {
+  bottom: 8px;
 }
