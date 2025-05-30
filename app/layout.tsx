@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"]
+  weight: ["100", "300", "400", "700", "900"],
 });
 
 const alumniSans = Alumni_Sans({
@@ -14,10 +14,10 @@ const alumniSans = Alumni_Sans({
   subsets: ["cyrillic"],
 });
 
-
 export const metadata: Metadata = {
   title: "Alchol Chemicals - Chemical Innovation for a Sustainable Future",
-  description: "Nigeria’s Foremost Manufacturer of Chloro-alkali Chemicals and Green Sustainable Energy.",
+  description:
+    "Nigeria’s Foremost Manufacturer of Chloro-alkali Chemicals and Green Sustainable Energy.",
 };
 
 export default function RootLayout({
@@ -27,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${lato.variable} ${alumniSans.variable} antialiased`}
-      >
+      <body className={`${lato.variable} ${alumniSans.variable} antialiased`}>
         {children}
         <Footer />
       </body>
